@@ -1,0 +1,42 @@
+import { useState } from "react";
+import "./Header.scss";
+
+import Logo from "@/components/common/logo/Logo";
+import NavMenu from "./NavMenu/NavMenu";
+import Button from "@/components/common/button/button";
+import MobileNavMenu from "./NavMenu/mobileNavMenu/MobileNavMenu";
+import { AiOutlineMenu } from "react-icons/ai";
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="header">
+      <div className="header__container">
+        <Logo />
+
+        {/* 桌機板選單 */}
+        <NavMenu />
+
+        {/* 手機版側邊攔 */}
+        <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
+
+        <div className="header__right">
+          {/* 訂閱按鈕 */}
+          <Button variant="tertiary">Subscribe</Button>
+
+          {/* 漢堡按鈕（手機版） */}
+          <button
+            className="hamburger-button"
+            onClick={() => setIsOpen(true)}
+            aria-label="開啟選單"
+          >
+            <AiOutlineMenu />
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

@@ -1,0 +1,42 @@
+@use "@/styles/main" as *;
+
+.btn {
+  padding: 8px 32px;
+  border: 1px solid transparent;
+  border-radius: 96px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  @include mobile {
+    padding: 8px 16px;
+  }
+
+  // primary
+  &--primary {
+    background-color: $primary;
+    color: $text-primary;
+  }
+
+  // secondary
+  &--secondary {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+  }
+
+  // tertiary
+  &--tertiary {
+    background-color: transparent;
+    color: $text-primary;
+    border-color: $text-primary;
+  }
+}

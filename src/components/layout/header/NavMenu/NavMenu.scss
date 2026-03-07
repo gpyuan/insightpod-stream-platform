@@ -1,0 +1,25 @@
+@use "@/styles/main" as *;
+
+.nav-menu {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+
+    @include mobile {
+      display: none;
+    }
+
+    li {
+      a {
+        text-decoration: none;
+        color: $text-secondary;
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(2);
+        }
+      }
+    }
+  }
+}

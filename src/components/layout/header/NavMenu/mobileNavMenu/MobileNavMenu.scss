@@ -1,0 +1,95 @@
+@use "@/styles/main" as *;
+
+.mobile-nav-menu {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+
+  // 背景遮罩
+  &__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+  }
+
+  // 側邊欄內容
+  &__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80px 24px 24px;
+    width: 80%;
+    max-width: 320px;
+    background: $bg-primary;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  &.is-open {
+    .mobile-nav-menu__backdrop {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-nav-menu__content {
+      transform: translateX(0);
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  // 連結列表
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    border-bottom: 1px solid $text-secondary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 16px 0;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &.active {
+      color: var(--primary-color);
+    }
+  }
+}
