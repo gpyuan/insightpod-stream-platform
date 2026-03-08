@@ -5,6 +5,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 .h1 {
   font-family: "Red Hat Display", sans-serif;
   font-size: 94px;
@@ -29,12 +30,6 @@
   line-height: 1.2;
 }
 
-.h1 {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 30px;
-  line-height: 1.4;
-}
-
 .body1 {
   font-family: "Poppins", sans-serif;
   font-size: 24px;
@@ -48,9 +43,10 @@
 }
 
 .body3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Red Hat Display", sans-serif;
   font-size: 18px;
   line-height: 1.4;
+  font-weight: bold;
 }
 
 .body4 {

@@ -23,11 +23,16 @@ const Header = () => {
 
         <div className="header__right">
           {/* 訂閱按鈕 */}
-          <Button variant="tertiary">Subscribe</Button>
+          <Button
+            variant="tertiary"
+            className="header__right__subscribe-btn body3"
+          >
+            Subscribe now
+          </Button>
 
           {/* 漢堡按鈕（手機版） */}
           <button
-            className="hamburger-button"
+            className="header__right__hamburger-btn"
             onClick={() => setIsOpen(true)}
             aria-label="開啟選單"
           >
