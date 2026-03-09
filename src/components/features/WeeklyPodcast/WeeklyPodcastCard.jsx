@@ -1,12 +1,11 @@
 import "./WeeklyPodcastCard.scss";
 import PlayButton from "@/components/common/button/PlayButton";
 
-const WeeklyPodcastCard = ({ weeklyPodcasts }) => {
-  const data = weeklyPodcasts[0];
+const WeeklyPodcastCard = ({ data, className }) => {
   const { id, image, title, author, duration } = data;
 
   return (
-    <div className="weekly-podcast-card">
+    <div className={`weekly-podcast-card ${className || ""}`}>
       {/* 左側圖片 */}
       <div className="weekly-podcast-card__img">
         <img src={image} alt="weekly-podcast-card-image" />

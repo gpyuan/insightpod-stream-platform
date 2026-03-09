@@ -9,7 +9,7 @@ const PlayButton = ({
   asIcon = false,
 }) => {
   const inner = (
-    <div className={`play-btn play-btn--hoverable ${className || ""} `}>
+    <div className={`play-btn  ${className || ""} `}>
       <div className={`play-btn__circle play-btn__circle--${variant}`}>
         <HiPlay className="play-btn__icon" />
       </div>
@@ -19,8 +19,12 @@ const PlayButton = ({
   if (asIcon) return inner;
 
   return (
-    <button className="play-btn">
-      <div className={`play-btn__circle play-btn__circle--${variant}`}>
+    <button className="play-btn play-btn--hoverable">
+      <div
+        className={`play-btn__circle play-btn__circle--${variant}  ${
+          className || ""
+        } `}
+      >
         <HiPlay className="play-btn__icon" />
       </div>
     </button>

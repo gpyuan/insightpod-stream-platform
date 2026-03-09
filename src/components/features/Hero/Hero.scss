@@ -1,0 +1,50 @@
+@use "@/styles/main" as *;
+
+.hero {
+  background-color: $bg-primary;
+  padding-top: 128px;
+  padding-left: 72px;
+  padding-right: 72px;
+  @include flex-center;
+
+  &__container {
+    max-width: 1440px;
+    height: 802px;
+    @include flex-center;
+  }
+
+  @include tablet {
+    padding-top: 80.78px;
+  }
+
+  @include mobile {
+    padding-top: 48.75px;
+  }
+
+  &__content {
+    width: 638px;
+    height: 557px;
+  }
+
+  &__title {
+    color: $text-primary;
+    margin-bottom: 24px;
+  }
+
+  &__desc {
+    width: 581px;
+    height: 96px;
+    margin-bottom: 40px;
+  }
+
+  &__listen-btn {
+    padding-right: 8px;
+    width: 240px;
+    height: 64px;
+  }
+
+  &__img {
+    width: 658.51px;
+    height: 772.8px;
+  }
+}
