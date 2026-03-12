@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <Logo />
+        <Logo to="/" />
 
         {/* 桌機板選單 */}
         <NavMenu />

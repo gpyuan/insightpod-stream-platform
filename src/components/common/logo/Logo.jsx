@@ -1,53 +1,56 @@
+import { Link } from "react-router-dom";
 import "./Logo.scss";
 
-function Logo() {
+function Logo({ to }) {
   return (
-    <div className="logo">
-      <svg
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="logo__icon"
-      >
-        <circle cx="15" cy="15" r="15" fill="#FFD25A" />
-        <rect
-          x="12.2751"
-          y="9.0459"
-          width="3.63636"
-          height="12.8497"
-          rx="1.81818"
-          fill="#532822"
-        />
-        <rect
-          x="6.3667"
-          y="15.4534"
-          width="3.63636"
-          height="5.45455"
-          rx="1.81818"
-          fill="#532822"
-        />
-        <rect
-          x="6.3667"
-          y="10.9094"
-          width="3.63636"
-          height="3.63636"
-          rx="1.81818"
-          fill="#532822"
-        />
-        <rect
-          x="18.1838"
-          y="7.27295"
-          width="3.63636"
-          height="16.3945"
-          rx="1.81818"
-          fill="#532822"
-        />
-      </svg>
+    <Link to={to}>
+      <div className="logo">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="logo__icon"
+        >
+          <circle cx="15" cy="15" r="15" fill="#FFD25A" />
+          <rect
+            x="12.2751"
+            y="9.0459"
+            width="3.63636"
+            height="12.8497"
+            rx="1.81818"
+            fill="#532822"
+          />
+          <rect
+            x="6.3667"
+            y="15.4534"
+            width="3.63636"
+            height="5.45455"
+            rx="1.81818"
+            fill="#532822"
+          />
+          <rect
+            x="6.3667"
+            y="10.9094"
+            width="3.63636"
+            height="3.63636"
+            rx="1.81818"
+            fill="#532822"
+          />
+          <rect
+            x="18.1838"
+            y="7.27295"
+            width="3.63636"
+            height="16.3945"
+            rx="1.81818"
+            fill="#532822"
+          />
+        </svg>
 
-      <h1 className="logo__title">InsightPod</h1>
-    </div>
+        <h1 className="logo__title">InsightPod</h1>
+      </div>
+    </Link>
   );
 }
 

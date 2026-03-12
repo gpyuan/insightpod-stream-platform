@@ -8,7 +8,7 @@ import AllWeeklyPodcast from "@/page/AllWeeklyPodcast";
 const App = () => {
   return (
     <>
-      <Header />
+      <Header path="/" />
 
       <main className="app">
         <Routes>
