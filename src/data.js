@@ -24,4 +24,22 @@ export const weeklyPodcasts = [
     author: "Aidan & Friends",
     duration: "16:20",
   },
+  {
+    id: 4,
+    image: `${
+      import.meta.env.BASE_URL
+    }images/weeklyPodcast/Love, Family, dan.png`,
+    title: "Love, Family, dan",
+    author: "Aidan & Friends",
+    duration: "16:20",
+  },
+  {
+    id: 5,
+    image: `${
+      import.meta.env.BASE_URL
+    }images/weeklyPodcast/Love, Family, dan.png`,
+    title: "Love, Family, dan",
+    author: "Aidan & Friends",
+    duration: "16:20",
+  },
 ];

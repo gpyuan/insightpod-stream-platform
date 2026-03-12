@@ -1,0 +1,88 @@
+@use "@/styles/main" as *;
+
+.all-weekly-podcast {
+  padding: 128px 72px 0;
+
+  @include tablet {
+    padding: 100px 50px 0;
+  }
+
+  @include mobile {
+    padding: 80px 16px 0;
+  }
+
+  &__list {
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+
+      @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &--list {
+      .weekly-podcast-card {
+        width: 100%;
+        margin-bottom: 16px;
+        @include flex-center;
+
+        &__content {
+          width: 100%;
+          height: auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          align-items: center;
+          gap: 16px;
+
+          &__title {
+            margin: 0;
+          }
+
+          &__author {
+            margin: 0;
+          }
+        }
+        &__btn {
+          top: 71px;
+        }
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: auto;
+
+          &__content {
+            display: flex;
+            flex-direction: column;
+          }
+          &__img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__controls {
+    margin: 20px;
+    button {
+      background: none;
+      border: none;
+      font-size: 35px;
+      color: $text-primary;
+      margin-right: 16px;
+      cursor: pointer;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(1.5);
+      }
+    }
+  }
+}

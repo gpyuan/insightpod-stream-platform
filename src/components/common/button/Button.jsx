@@ -1,13 +1,21 @@
 import "./Button.scss";
 
-const Button = ({ children, variant = "primary", onClick, className }) => {
+const Button = ({
+  as: Component = "button",
+  children,
+  variant = "primary",
+  onClick,
+  className,
+  ...props
+}) => {
   return (
-    <button
+    <Component
       className={`btn btn--${variant} ${className || ""}`}
       onClick={onClick}
+      {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
 
