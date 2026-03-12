@@ -11,7 +11,7 @@
     padding: 32px 72px;
 
     @include tablet {
-      padding: 24px 20px;
+      padding: 24px 10px;
       height: 100px;
     }
 
@@ -39,9 +39,15 @@
       }
     }
 
-    &__subscribe-btn {
+    &__subscribe-btn.body3 {
       width: 214px;
       height: 64px;
+
+      @include mobile-and-tablet {
+        width: 170px;
+        height: 55px;
+        padding: 8px 20px;
+      }
     }
   }
 }
