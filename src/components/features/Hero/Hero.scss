@@ -2,39 +2,59 @@
 
 .hero {
   background-color: $bg-primary;
-  padding-top: 128px;
-  padding-left: 72px;
-  padding-right: 72px;
+  padding: 128px 72px 0;
   @include flex-center;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    padding-top: 80px;
+  }
 
   &__container {
     max-width: 1440px;
     height: 802px;
     @include flex-center;
-  }
 
-  @include tablet {
-    padding-top: 80.78px;
-  }
-
-  @include mobile {
-    padding-top: 48.75px;
+    @include mobile-and-tablet {
+      height: auto;
+      flex-direction: column;
+      gap: 30px;
+    }
   }
 
   &__content {
     width: 638px;
     height: 557px;
+
+    @include mobile {
+      padding: 0 15px;
+      max-width: 300px;
+      height: auto;
+    }
   }
 
-  &__title {
+  &__title.h1 {
     color: $text-primary;
     margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 50px;
+    }
   }
 
   &__desc {
     width: 581px;
     height: 96px;
     margin-bottom: 40px;
+
+    @include mobile {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+    }
   }
 
   &__listen-btn {
@@ -46,5 +66,10 @@
   &__img {
     width: 658.51px;
     height: 772.8px;
+
+    @include mobile {
+      width: 300px;
+      height: auto;
+    }
   }
 }
