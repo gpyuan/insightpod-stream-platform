@@ -4,6 +4,7 @@
   width: 100%;
   position: fixed;
   background-color: $bg-primary;
+  z-index: 2000;
 
   &__container {
     @include flex-space-between;

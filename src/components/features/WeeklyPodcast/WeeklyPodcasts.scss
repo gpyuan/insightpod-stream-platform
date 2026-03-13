@@ -5,17 +5,50 @@
   height: 413px;
   padding: 64px 0 64px 72px;
 
+  @include tablet {
+    padding: 40px 0 40px 50px;
+  }
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  &__podcast-list {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   &__title-group {
     @include flex-space-between;
     margin-bottom: 48px;
+    padding-right: 10px;
 
-    &__title {
+    @include mobile {
+      margin-bottom: 24px;
+    }
+
+    &__title.h2 {
       color: $text-primary;
+
+      @include tablet {
+        font-size: 40px;
+      }
+
+      @include mobile {
+        font-size: 25px;
+      }
     }
 
     &__btn {
       width: 181px;
       height: 64px;
+
+      @include mobile {
+        width: 100px;
+        height: 40px;
+      }
     }
   }
 
@@ -24,5 +57,9 @@
     gap: 16px;
     overflow-x: auto;
     scrollbar-width: thin;
+
+    @include mobile-and-tablet {
+      scrollbar-width: none;
+    }
   }
 }
