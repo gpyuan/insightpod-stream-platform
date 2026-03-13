@@ -1,10 +1,15 @@
 @use "@/styles/main" as *;
 
 .top-podcaster-card {
-  width: 246px;
-  height: 520px;
+  width: 100%;
   display: flex;
   position: relative;
+  grid-column: span 1;
+
+  &--large {
+    grid-column: span 2;
+    margin-right: 16px;
+  }
 
   &__info {
     width: 170px;
@@ -43,3 +48,9 @@
     border-radius: 32px;
   }
 }
+
+// .top-podcaster-card img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }

@@ -4,6 +4,7 @@ import Header from "@/components/layout/header/Header";
 import Hero from "@/components/features/Hero/Hero";
 import WeeklyPodcasts from "@/components/features/WeeklyPodcast/WeeklyPodcasts";
 import AllWeeklyPodcast from "@/page/AllWeeklyPodcast";
+import TopPodcasters from "@/components/features/TopPodcasters/TopPodcasters";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
               <>
                 <Hero />
                 <WeeklyPodcasts />
+                <TopPodcasters />
               </>
             }
           />

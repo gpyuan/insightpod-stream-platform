@@ -1,7 +1,7 @@
 import "./AllWeeklyPodcast.scss";
 import { useState, useEffect } from "react";
 import WeeklyPodcastCard from "@/components/features/WeeklyPodcast/WeeklyPodcastCard";
-import { weeklyPodcasts } from "@/data";
+import { weeklyPodcastsData } from "@/data";
 import { MdOutlineGridView } from "react-icons/md";
 import { IoIosList } from "react-icons/io";
 
@@ -28,8 +28,8 @@ const AllWeeklyPodcast = () => {
         <div
           className={`all-weekly-podcast__list  all-weekly-podcast__list--${view}`}
         >
-          {weeklyPodcasts?.length > 0 ? (
-            weeklyPodcasts.map((podcast) => (
+          {weeklyPodcastsData?.length > 0 ? (
+            weeklyPodcastsData.map((podcast) => (
               <WeeklyPodcastCard
                 key={podcast.id}
                 data={podcast}

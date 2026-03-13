@@ -1,4 +1,4 @@
-export const weeklyPodcasts = [
+export const weeklyPodcastsData = [
   {
     id: 1,
     image: `${
@@ -41,5 +41,32 @@ export const weeklyPodcasts = [
     title: "Love, Family, dan",
     author: "Aidan & Friends",
     duration: "16:20",
+  },
+];
+
+export const TopPodcastersData = [
+  {
+    id: "top-1",
+    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-1.png`,
+    author: "Mr. Mark baba",
+    streams: 1600000,
+  },
+  {
+    id: "top-2",
+    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-2.png`,
+    author: "Nadia Lestary",
+    streams: null,
+  },
+  {
+    id: "top-3",
+    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-3.png`,
+    author: "Evan Caster Lee",
+    streams: null,
+  },
+  {
+    id: "top-4",
+    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-4.png`,
+    author: "Stefy Catlyna",
+    streams: null,
   },
 ];

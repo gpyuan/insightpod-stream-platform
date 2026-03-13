@@ -1,7 +1,7 @@
 import "./WeeklyPodcasts.scss";
 import { Link } from "react-router-dom";
 import Button from "@/components/common/button/Button";
-import { weeklyPodcasts } from "@/data";
+import { weeklyPodcastsData } from "@/data";
 import WeeklyPodcastCard from "./WeeklyPodcastCard";
 
 const WeeklyPodcasts = () => {
@@ -24,8 +24,8 @@ const WeeklyPodcasts = () => {
 
       {/* podcasts */}
       <div className="weekly-podcasts__podcast-list">
-        {weeklyPodcasts?.length > 0 ? (
-          weeklyPodcasts
+        {weeklyPodcastsData?.length > 0 ? (
+          weeklyPodcastsData
             .slice(0, 3)
             .map((podcast) => (
               <WeeklyPodcastCard key={podcast.id} data={podcast} />

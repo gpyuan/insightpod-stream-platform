@@ -1,12 +1,7 @@
 import "./TopPodcasterCard.scss";
 
-const TopPodcasterCard = ({ size = "large" }) => {
-  const data = {
-    id: "top-1",
-    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-1.png`,
-    author: "Mr. Mark baba",
-    streams: 1600000,
-  };
+const TopPodcasterCard = ({ data, size }) => {
+  const { id, image, author, streams } = data;
 
   const formatStreams = (streams) => {
     if (!streams) return null;
@@ -23,15 +18,19 @@ const TopPodcasterCard = ({ size = "large" }) => {
         <h2
           className={`top-podcaster-card__author top-podcaster-card__author--${size} h4`}
         >
-          {data.author}
+          {author}
         </h2>
-        {size === "large" && data.streams && (
+        {size === "large" && streams && (
           <p className="top-podcaster-card__streams">
-            {formatStreams(data.streams)} streams
+            {formatStreams(streams)} streams
           </p>
         )}
       </div>
-      <img src={data.image} alt="top-podcaster-author" />
+      <img
+        src={image}
+        alt="top-podcaster"
+        className={`top-podcaster-card__img top-podcaster-card__img--${size}`}
+      />
     </div>
   );
 };

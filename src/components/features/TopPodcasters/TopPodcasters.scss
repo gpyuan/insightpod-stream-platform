@@ -1,0 +1,26 @@
+@use "@/styles/main" as *;
+
+.top-podcasters {
+  width: 1440px;
+  height: 844px;
+  display: flex;
+  flex-direction: column;
+  gap: 62px;
+  padding: 64px 0;
+  align-items: center;
+
+  &__title {
+    color: $text-primary;
+    width: 454px;
+    height: auto;
+    text-align: center;
+  }
+
+  &__list {
+    height: 520px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    padding: 0 72px;
+  }
+}
