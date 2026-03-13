@@ -1,0 +1,35 @@
+@use "@/styles/main" as *;
+
+.top-podcaster-card {
+  width: 246px;
+  height: 520px;
+  display: flex;
+  position: relative;
+
+  &__info {
+    width: 170px;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 38px;
+  }
+
+  &__author {
+    color: $color-white;
+    text-align: center;
+
+    &--large.h4 {
+      width: 227px;
+      height: auto;
+      font-size: 56px;
+      font-weight: 800;
+    }
+  }
+
+  &__streams {
+    font-family: "Red Hat Display", sans-serif;
+    color: $text-primary;
+    background-color: $color-white;
+    position: absolute;
+  }
+}
