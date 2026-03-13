@@ -1,11 +1,11 @@
 import "./TopPodcasterCard.scss";
 
-const TopPodcasterCard = ({ size = "" }) => {
+const TopPodcasterCard = ({ size = "large" }) => {
   const data = {
-    id: "top-2",
-    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-2.png`,
-    author: "Nadia Lestary",
-    streams: null,
+    id: "top-1",
+    image: `${import.meta.env.BASE_URL}images/topPodcast/top-podcaster-1.png`,
+    author: "Mr. Mark baba",
+    streams: 1600000,
   };
 
   const formatStreams = (streams) => {

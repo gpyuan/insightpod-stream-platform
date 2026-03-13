@@ -12,6 +12,9 @@
     position: absolute;
     top: 40px;
     left: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__author {
@@ -23,6 +26,7 @@
       height: auto;
       font-size: 56px;
       font-weight: 800;
+      text-align: start;
     }
   }
 
@@ -30,6 +34,12 @@
     font-family: "Red Hat Display", sans-serif;
     color: $text-primary;
     background-color: $color-white;
-    position: absolute;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    width: 227px;
+    height: auto;
+    border-radius: 32px;
   }
 }
