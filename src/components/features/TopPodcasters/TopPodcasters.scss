@@ -27,10 +27,12 @@
 
     @include tablet {
       font-size: 40px;
+      width: auto;
     }
 
     @include mobile {
       font-size: 25px;
+      width: auto;
     }
   }
 
