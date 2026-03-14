@@ -1,0 +1,57 @@
+@use "@/styles/main" as *;
+
+.about {
+  width: 100%;
+  max-width: 1440px;
+  height: 704px;
+  padding: 64px 0;
+
+  &__header {
+    display: flex;
+    padding: 0 72px;
+    margin-bottom: 56px;
+
+    &__title {
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 56px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: $text-primary;
+    }
+
+    &__text {
+      color: rgba(83, 40, 34, 0.4);
+    }
+  }
+
+  &__content {
+    padding: 0 72px;
+    height: 143px;
+    @include flex-space-between;
+
+    &__achivements {
+      display: flex;
+      gap: 88px;
+    }
+
+    &__achivement {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__number {
+      color: $secondary;
+    }
+
+    &__name {
+      color: $text-secondary;
+      white-space: nowrap;
+    }
+
+    &__description {
+      &__text {
+        width: 435px;
+      }
+    }
+  }
+}
