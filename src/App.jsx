@@ -7,6 +7,7 @@ import AllWeeklyPodcast from "@/page/AllWeeklyPodcast";
 import TopPodcasters from "@/components/features/TopPodcasters/TopPodcasters";
 import About from "@/components/features/About/About";
 import Benefit from "@/components/features/Benefit/Benefit";
+import CTA from "@/components/features/CTA/CTA";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
                 <TopPodcasters />
                 <About />
                 <Benefit />
+                <CTA />
               </>
             }
           />

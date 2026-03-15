@@ -1,0 +1,43 @@
+@use "@/styles/main" as *;
+
+.cta {
+  width: 100%;
+  max-width: 1440px;
+  padding: 64px 8px;
+
+  &__container {
+    width: 100%;
+    max-width: 1296px;
+    background-color: $text-primary;
+    border-radius: 56px;
+    padding: 56px 54px;
+    margin: 0 auto;
+    @include flex-space-between;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 605px;
+  }
+
+  &__title {
+    color: $bg-primary;
+    margin-bottom: 24px;
+  }
+
+  &__desc {
+    color: $color-white;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 562px;
+  }
+
+  &__listen-btn {
+    padding-right: 8px;
+    width: 240px;
+    height: 64px;
+  }
+}
