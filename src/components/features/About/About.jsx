@@ -2,6 +2,11 @@ import "./About.scss";
 import aboutImg from "@/assets/images/about.png";
 
 const About = () => {
+  const stats = [
+    { number: "5+", label: "Awards Gained" },
+    { number: "12+", label: "Years of Experience" },
+    { number: "236", label: "Podcasters" },
+  ];
   return (
     <section className="about">
       <div className="about__header">
@@ -23,19 +28,14 @@ const About = () => {
 
       <div className="about__content">
         <div className="about__content__achivements">
-          <div className="about__content__achivement">
-            <p className="about__content__number h1">5+</p>
-            <p className="about__content__name body2">Awards Gained</p>
-          </div>
-          <div className="about__content__achivement">
-            <p className="about__content__number h1">12+</p>
-            <p className="about__content__name body2">Years of Experience</p>
-          </div>
-          <div className="about__content__achivement">
-            <p className="about__content__number h1">236+</p>
-            <p className="about__content__name body2">Podcasters</p>
-          </div>
+          {stats.map((item, index) => (
+            <div key={index} className="about__content__item">
+              <span className="about__content__number h1">{item.number}</span>
+              <p className="about__content__lable body2">{item.label}</p>
+            </div>
+          ))}
         </div>
+
         <div className="about__content__description">
           <p className="about__content__description__text body4">
             Unlock invaluable wisdom personalized for you in our top-notch

@@ -108,17 +108,13 @@
       }
     }
 
-    &__achivement {
-      display: flex;
-      flex-direction: column;
-
+    &__item {
       @include tablet {
         margin-bottom: 48px;
       }
 
       @include mobile {
         display: flex;
-        flex-direction: row;
         align-items: center;
         gap: 16px;
       }
@@ -136,18 +132,14 @@
       }
     }
 
-    &__name {
+    &__lable {
       color: $text-secondary;
-      white-space: nowrap;
-
-      @include mobile {
-        // white-space: wrap;
-      }
     }
 
     &__description {
       &__text {
         width: 435px;
+        color: $text-secondary;
 
         @include tablet {
           width: 100%;
