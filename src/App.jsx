@@ -8,6 +8,7 @@ import TopPodcasters from "@/components/features/TopPodcasters/TopPodcasters";
 import About from "@/components/features/About/About";
 import Benefit from "@/components/features/Benefit/Benefit";
 import CTA from "@/components/features/CTA/CTA";
+import Footer from "./components/layout/footer/Footer";
 
 const App = () => {
   return (
@@ -39,12 +40,14 @@ const App = () => {
             path="*"
             element={
               <div className="no-data">
-                這頁面不存在，請檢查網址路徑是否正確。
+                頁面不存在，請檢查網址路徑是否正確。
               </div>
             }
           />
         </Routes>
       </main>
+
+      <Footer />
     </>
   );
 };

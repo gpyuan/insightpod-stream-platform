@@ -1,0 +1,76 @@
+@use "@/styles/main" as *;
+
+.footer {
+  width: 100%;
+  padding: 64px 72px;
+
+  &__header {
+    color: $text-primary;
+    text-align: center;
+    margin-bottom: 80px;
+
+    &--linear {
+      display: block;
+      background: linear-gradient(to bottom, #7f7d7d 0%, rgba(#7f7d7d, 0) 100%);
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &__content {
+    &__list {
+      @include flex-space-between;
+      list-style: none;
+      padding-bottom: 56px;
+      border-bottom: 1px solid #7f7f7f;
+    }
+
+    &__aside {
+      list-style: none;
+      display: flex;
+      gap: 64px;
+    }
+
+    &__item {
+      a {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__logo {
+    font-family: "Red Hat Display", sans-serif;
+  }
+
+  &__medias {
+    @include flex-center;
+    gap: 12px;
+    margin-top: 46px;
+  }
+
+  &__media-item {
+    width: 160px;
+    height: 64px;
+  }
+
+  &__media-item-content {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+  }
+
+  &__media-icon {
+    font-size: 24px;
+  }
+
+  &__media-name {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+}

@@ -1,3 +1,11 @@
+// navMenu links
+export const navLinks = [
+  { name: "About", path: "/about" },
+  { name: "Subscribe", path: "/subscribe" },
+  { name: "Episode", path: "/episode" },
+  { name: "Insiders", path: "/insiders" },
+];
+
 export const weeklyPodcastsData = [
   {
     id: 1,

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Logo.scss";
 
-function Logo({ to }) {
+function Logo({ to, className }) {
   return (
     <Link to={to}>
       <div className="logo">
@@ -48,7 +48,7 @@ function Logo({ to }) {
           />
         </svg>
 
-        <h1 className="logo__title">InsightPod</h1>
+        <h1 className={`logo__title ${className || ""}`}>InsightPod</h1>
       </div>
     </Link>
   );

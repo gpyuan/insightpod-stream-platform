@@ -1,18 +1,12 @@
 import { Link } from "react-router-dom";
 import "./NavMenu.scss";
+import { navLinks } from "@/data";
 
-const NavMenu = () => {
-  const links = [
-    { name: "About", path: "/about" },
-    { name: "Subscribe", path: "/subscribe" },
-    { name: "Episode", path: "/episode" },
-    { name: "Insiders", path: "/insiders" },
-  ];
-
+const NavMenu = ({ className }) => {
   return (
     <nav className="nav-menu">
       <ul className="nav-menu__list">
-        {links.map((link) => (
+        {navLinks.map((link) => (
           <li key={link.path} className="nav-menu__item">
             <Link to={link.path} className="body5">
               {link.name}
