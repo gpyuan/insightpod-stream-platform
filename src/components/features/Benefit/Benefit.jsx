@@ -13,7 +13,12 @@ const Benefit = () => {
   return (
     <section className="benefit">
       {/* 左側圖片 */}
-      <img src={benefitImg} alt="" role="presentation" />
+      <img
+        src={benefitImg}
+        alt=""
+        role="presentation"
+        className="benefit__img"
+      />
 
       {/* 右側內容 */}
       <div className="benefit__content">
