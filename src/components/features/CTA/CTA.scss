@@ -5,24 +5,59 @@
   max-width: 1440px;
   padding: 64px 8px;
 
+  @include tablet {
+    padding: 32px 8px;
+  }
+
+  @include mobile {
+    padding: 24px 8px;
+  }
+
   &__container {
-    width: 100%;
     max-width: 1296px;
     background-color: $text-primary;
     border-radius: 56px;
     padding: 56px 54px;
     margin: 0 auto;
     @include flex-space-between;
+
+    @include mobile-and-tablet {
+      flex-direction: column;
+      padding: 40px;
+      gap: 32px;
+    }
+
+    @include tablet {
+      max-width: 700px;
+    }
+  }
+
+  &__img {
+    @include tablet {
+      width: 350px;
+    }
+
+    @include mobile {
+      width: 200px;
+    }
   }
 
   &__content {
     width: 100%;
     max-width: 605px;
+
+    @include tablet {
+      max-width: 500px;
+    }
   }
 
-  &__title {
+  &__title.h2 {
     color: $bg-primary;
     margin-bottom: 24px;
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__desc {
@@ -33,11 +68,19 @@
     margin-bottom: 40px;
     width: 100%;
     max-width: 562px;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__listen-btn {
     padding-right: 8px;
     width: 240px;
     height: 64px;
+
+    @include mobile {
+      margin: auto;
+    }
   }
 }
