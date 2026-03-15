@@ -5,11 +5,35 @@
   max-width: 1440px;
   height: 704px;
   padding: 64px 0;
+  flex-direction: column;
+  @include flex-center;
+
+  @include tablet {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  @include mobile {
+    height: auto;
+    padding: 16px 0;
+  }
 
   &__header {
     display: flex;
     padding: 0 72px;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
+    justify-content: center;
+
+    @include tablet {
+      width: 100%;
+      padding: 0 50px;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 0 16px;
+      margin-bottom: 24px;
+    }
 
     &__title {
       font-family: "Red Hat Display", sans-serif;
@@ -17,40 +41,123 @@
       line-height: 1.2;
       font-weight: 800;
       color: $text-primary;
+      width: 100%;
+      max-width: 855px;
+
+      @include tablet {
+        max-width: 500px;
+        font-size: 32px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
     }
 
     &__text {
       color: rgba(83, 40, 34, 0.4);
+    }
+
+    &__img {
+      @include tablet {
+        width: 200px;
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 
   &__content {
     padding: 0 72px;
     height: 143px;
+    width: 100%;
     @include flex-space-between;
+
+    @include tablet {
+      width: 100%;
+      padding: 0 50px;
+      flex-direction: column;
+      height: auto;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 0 16px;
+      flex-direction: column;
+      height: auto;
+    }
 
     &__achivements {
       display: flex;
       gap: 88px;
+      height: 143px;
+
+      @include tablet {
+        gap: 60px;
+        height: auto;
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        height: auto;
+        margin-bottom: 30px;
+      }
     }
 
     &__achivement {
       display: flex;
       flex-direction: column;
+
+      @include tablet {
+        margin-bottom: 48px;
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+      }
     }
 
-    &__number {
+    &__number.h1 {
       color: $secondary;
+
+      @include tablet {
+        font-size: 48px;
+      }
+
+      @include mobile {
+        font-size: 36px;
+      }
     }
 
     &__name {
       color: $text-secondary;
       white-space: nowrap;
+
+      @include mobile {
+        // white-space: wrap;
+      }
     }
 
     &__description {
       &__text {
         width: 435px;
+
+        @include tablet {
+          width: 100%;
+          max-width: 700px;
+        }
+
+        @include mobile {
+          width: 100%;
+          max-width: 700px;
+        }
       }
     }
   }

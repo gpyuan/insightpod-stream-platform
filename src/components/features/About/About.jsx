@@ -13,7 +13,12 @@ const About = () => {
             advice.
           </span>
         </h2>
-        <img src={aboutImg} alt="" role="presentation" />
+        <img
+          src={aboutImg}
+          alt=""
+          role="presentation"
+          className="about__header__img"
+        />
       </div>
 
       <div className="about__content">
