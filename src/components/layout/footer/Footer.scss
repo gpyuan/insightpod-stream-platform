@@ -4,16 +4,28 @@
   width: 100%;
   padding: 64px 72px;
 
-  &__header {
+  @include mobile {
+    padding: 24px;
+  }
+
+  &__header.h3 {
     color: $text-primary;
     text-align: center;
     margin-bottom: 80px;
 
-    &--linear {
-      display: block;
-      background: linear-gradient(to bottom, #7f7d7d 0%, rgba(#7f7d7d, 0) 100%);
-      background-clip: text;
-      color: transparent;
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__header.h3 &__header--linear {
+    background: linear-gradient(to bottom, #7f7d7d 0%, rgba(#7f7d7d, 0) 100%);
+    background-clip: text;
+    color: transparent;
+
+    @include mobile {
+      font-size: 24px;
     }
   }
 
@@ -23,12 +35,22 @@
       list-style: none;
       padding-bottom: 56px;
       border-bottom: 1px solid #7f7f7f;
+
+      @include mobile {
+        gap: 16px;
+        justify-content: center;
+        padding-bottom: 24px;
+      }
     }
 
     &__aside {
       list-style: none;
       display: flex;
       gap: 64px;
+
+      @include mobile {
+        gap: 16px;
+      }
     }
 
     &__item {
@@ -44,27 +66,49 @@
 
   &__logo {
     font-family: "Red Hat Display", sans-serif;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__medias {
     @include flex-center;
     gap: 12px;
     margin-top: 46px;
+
+    @include mobile {
+      gap: 8px;
+      margin-top: 32px;
+    }
   }
 
   &__media-item {
     width: 160px;
     height: 64px;
+
+    @include mobile {
+      width: 120px;
+      height: 48px;
+    }
   }
 
   &__media-item-content {
     display: flex;
     gap: 8px;
     margin-top: 5px;
+
+    @include mobile {
+      gap: 4px;
+    }
   }
 
   &__media-icon {
     font-size: 24px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__media-name {
@@ -72,5 +116,9 @@
     font-size: 18px;
     line-height: 1.4;
     font-weight: 700;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }

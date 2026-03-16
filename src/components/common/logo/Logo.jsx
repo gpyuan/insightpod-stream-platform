@@ -11,7 +11,7 @@ function Logo({ to, className }) {
           viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="logo__icon"
+          className={`logo__icon ${className || ""}`}
         >
           <circle cx="15" cy="15" r="15" fill="#FFD25A" />
           <rect

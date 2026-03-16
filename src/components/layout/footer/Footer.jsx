@@ -33,8 +33,9 @@ const Footer = () => {
     <footer className="footer">
       {/* 上方文字 */}
       <h3 className="footer__header h3">
-        Unlock invaluable wisdom personalized{" "}
-        <span className="footer__header--linear">
+        Unlock invaluable wisdom personalized
+        <br />
+        <span className="footer__header--linear h3">
           for you in our top-notch podcast.
         </span>
       </h3>
