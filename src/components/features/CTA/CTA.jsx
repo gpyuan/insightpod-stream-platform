@@ -5,14 +5,14 @@ import PlayButton from "@/components/common/Button/PlayButton";
 
 const CTA = () => {
   return (
-    <section className="cta">
+    <section className="cta" aria-labelledby="cta-heading">
       {/* 左側圖片 */}
       <div className="cta__container">
-        <img src={CTAImg} alt="" role="presentation" className="cta__img" />
+        <img src={CTAImg} alt="" className="cta__img" />
 
         {/* 右側內容 */}
         <div className="cta__content">
-          <h2 className="cta__title h2">
+          <h2 id="cta-heading" className="cta__title h2">
             Listen to the latest and exciting podcast content
           </h2>
           <p className="cta__desc">
@@ -21,7 +21,7 @@ const CTA = () => {
           </p>
           <Button variant="primary" className="cta__listen-btn body3">
             <span className="cta__listen-btn__content">Listen Now</span>
-            <PlayButton variant="primary" asIcon></PlayButton>
+            <PlayButton variant="primary" asIcon />
           </Button>
         </div>
       </div>

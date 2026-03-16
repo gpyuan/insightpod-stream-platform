@@ -16,12 +16,24 @@ const AllWeeklyPodcast = () => {
     <>
       <div className={`all-weekly-podcast`}>
         {/* 切換按鈕 */}
-        <div className="all-weekly-podcast__controls">
-          <button onClick={() => setView("grid")}>
-            <MdOutlineGridView />
+        <div
+          className="all-weekly-podcast__controls"
+          role="group"
+          aria-label="View mode"
+        >
+          <button
+            onClick={() => setView("grid")}
+            aria-label="Grid view"
+            aria-pressed={view === "grid"}
+          >
+            <MdOutlineGridView aria-hidden="true" />
           </button>
-          <button onClick={() => setView("list")}>
-            <IoIosList />
+          <button
+            onClick={() => setView("list")}
+            aria-label="List view"
+            aria-pressed={view === "list"}
+          >
+            <IoIosList aria-hidden="true" />
           </button>
         </div>
 
@@ -37,7 +49,7 @@ const AllWeeklyPodcast = () => {
               />
             ))
           ) : (
-            <p className="no-data">目前沒有任何Podcast</p>
+            <p className="no-data">No podcasts available at the moment.</p>
           )}
         </div>
       </div>

@@ -1,27 +1,27 @@
 import "./TopPodcasterCard.scss";
 
 const TopPodcasterCard = ({ data, size }) => {
-  const { id, image, author, streams } = data;
+  const { image, author, streams } = data;
 
   const formatStreams = (streams) => {
     if (!streams) return null;
     if (streams >= 1000000)
       return parseFloat((streams / 1000000).toFixed(1)) + " million";
     if (streams >= 1000)
-      return parseFloat((streams / 1000).toFixed(1)) + " Kilo";
+      return parseFloat((streams / 1000).toFixed(1)) + " thousand";
     return streams.toString();
   };
 
   return (
-    <div className={`top-podcaster-card top-podcaster-card--${size}`}>
+    <article className={`top-podcaster-card top-podcaster-card--${size}`}>
       <div
         className={`top-podcaster-card__info top-podcaster-card__info--${size}`}
       >
-        <h2
+        <h3
           className={`top-podcaster-card__author top-podcaster-card__author--${size}`}
         >
           {author}
-        </h2>
+        </h3>
         {size === "large" && streams && (
           <p className="top-podcaster-card__streams">
             {formatStreams(streams)} streams
@@ -30,10 +30,10 @@ const TopPodcasterCard = ({ data, size }) => {
       </div>
       <img
         src={image}
-        alt="top-podcaster"
+        alt={`${author} podcast cover`}
         className={`top-podcaster-card__img top-podcaster-card__img--${size}`}
       />
-    </div>
+    </article>
   );
 };
 

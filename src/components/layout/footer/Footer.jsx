@@ -13,37 +13,37 @@ const Footer = () => {
 
   const medias = [
     {
-      icon: <FaXTwitter />,
+      icon: <FaXTwitter aria-hidden="true" />,
       name: "Twitter",
       href: "https://x.com/",
     },
     {
-      icon: <RiInstagramFill />,
+      icon: <RiInstagramFill aria-hidden="true" />,
       name: "Instagram",
       href: "https://www.instagram.com/",
     },
     {
-      icon: <MdOutlineFacebook />,
+      icon: <MdOutlineFacebook aria-hidden="true" />,
       name: "Facebook",
-      href: "https://www.facebook.com/?locale=zh_TW",
+      href: "https://www.facebook.com/",
     },
   ];
 
   return (
     <footer className="footer">
       {/* 上方文字 */}
-      <h3 className="footer__header h3">
+      <h2 className="footer__header h3">
         Unlock invaluable wisdom personalized
         <br />
         <span className="footer__header--linear h3">
           for you in our top-notch podcast.
         </span>
-      </h3>
+      </h2>
 
       {/* 下方選單 */}
       <div className="footer__content">
-        <div className="footer__content__list">
-          <div className="footer__content__aside">
+        <nav className="footer__content__list" aria-label="Footer navigation">
+          <ul className="footer__content__aside">
             {leftLinks.map((link) => (
               <li key={link.path} className="footer__content__item">
                 <Link to={link.path} className="body5">
@@ -51,13 +51,13 @@ const Footer = () => {
                 </Link>
               </li>
             ))}
+          </ul>
+
+          <div className="footer__content__logo">
+            <Logo className="footer__logo" />
           </div>
 
-          <li className="footer__content__logo">
-            <Logo className="footer__logo" />
-          </li>
-
-          <div className="footer__content__aside">
+          <ul className="footer__content__aside">
             {rightLinks.map((link) => (
               <li key={link.path} className="footer__content__item">
                 <Link to={link.path} className="body5">
@@ -65,19 +65,21 @@ const Footer = () => {
                 </Link>
               </li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </nav>
 
         {/* 社群媒體 */}
-        <div className="footer__medias">
+        <nav className="footer__medias" aria-label="Social media links">
           {medias.map((media) => (
             <Button
               key={media.name}
               as="a"
               href={media.href}
               target="_blank"
+              rel="noopener noreferrer"
               variant="tertiary"
               className="footer__media-item"
+              aria-label={`Visit our ${media.name}`}
             >
               <div className="footer__media-item-content">
                 <span className="footer__media-icon">{media.icon}</span>
@@ -85,7 +87,7 @@ const Footer = () => {
               </div>
             </Button>
           ))}
-        </div>
+        </nav>
       </div>
     </footer>
   );

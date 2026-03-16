@@ -60,6 +60,11 @@
         line-height: 1.4;
         font-weight: 500;
         color: $text-primary;
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(2);
+        }
       }
     }
   }

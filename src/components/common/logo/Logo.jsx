@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Logo.scss";
 
-function Logo({ to, className }) {
+function Logo({ to = "/", className }) {
   return (
-    <Link to={to}>
+    <Link to={to} aria-label="回到首頁">
       <div className="logo">
         <svg
           width="30"
@@ -12,6 +12,7 @@ function Logo({ to, className }) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className={`logo__icon ${className || ""}`}
+          aria-hidden="true"
         >
           <circle cx="15" cy="15" r="15" fill="#FFD25A" />
           <rect

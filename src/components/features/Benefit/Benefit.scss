@@ -2,7 +2,8 @@
 
 .benefit {
   padding: 56px 80px;
-  @include flex-center;
+  display: flex;
+  align-items: center;
   gap: 53px;
 
   @include tablet {

@@ -6,10 +6,16 @@ import WeeklyPodcastCard from "./WeeklyPodcastCard";
 
 const WeeklyPodcasts = () => {
   return (
-    <section className="weekly-podcasts">
+    <section
+      className="weekly-podcasts"
+      aria-labelledby="weekly-podcasts-heading"
+    >
       {/* header */}
       <div className="weekly-podcasts__title-group">
-        <h2 className="weekly-podcasts__title-group__title h2">
+        <h2
+          id="weekly-podcasts-heading"
+          className="weekly-podcasts__title-group__title h2"
+        >
           Weekly Podcast
         </h2>
         <Button
@@ -23,17 +29,18 @@ const WeeklyPodcasts = () => {
       </div>
 
       {/* podcasts */}
-      <div className="weekly-podcasts__podcast-list">
-        {weeklyPodcastsData?.length > 0 ? (
-          weeklyPodcastsData
-            .slice(0, 3)
-            .map((podcast) => (
-              <WeeklyPodcastCard key={podcast.id} data={podcast} />
-            ))
-        ) : (
-          <p>目前沒有任何Podcast</p>
-        )}
-      </div>
+
+      {weeklyPodcastsData?.length > 0 ? (
+        <ul className="weekly-podcasts__podcast-list">
+          {weeklyPodcastsData.slice(0, 3).map((podcast) => (
+            <li key={podcast.id}>
+              <WeeklyPodcastCard data={podcast} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="empty"> No podcasts available at the moment</p>
+      )}
     </section>
   );
 };

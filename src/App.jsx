@@ -40,7 +40,7 @@ const App = () => {
             path="*"
             element={
               <div className="no-data">
-                頁面不存在，請檢查網址路徑是否正確。
+                Page not found. Please check if the URL is correct.
               </div>
             }
           />

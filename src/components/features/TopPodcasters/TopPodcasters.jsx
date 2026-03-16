@@ -4,21 +4,27 @@ import TopPodcasterCard from "./TopPodcasterCard";
 
 const TopPodcasters = () => {
   return (
-    <section className="top-podcasters">
-      <h2 className="top-podcasters__title h2">Top Podcasters of the Week</h2>
-      <div className="top-podcasters__list">
+    <section
+      className="top-podcasters"
+      aria-labelledby="top-podcasters-heading"
+    >
+      <h2 id="top-podcasters-heading" className="top-podcasters__title h2">
+        Top Podcasters of the Week
+      </h2>
+      <ul className="top-podcasters__list">
         {TopPodcastersData?.length > 0 ? (
           TopPodcastersData.map((podcaster, index) => (
-            <TopPodcasterCard
-              key={podcaster.id}
-              data={podcaster}
-              size={index === 0 ? "large" : "normal"}
-            />
+            <li key={podcaster.id}>
+              <TopPodcasterCard
+                data={podcaster}
+                size={index === 0 ? "large" : "normal"}
+              />
+            </li>
           ))
         ) : (
-          <p>目前沒有任何Podcaster</p>
+          <p className="empty">No podcasters available at the moment</p>
         )}
-      </div>
+      </ul>
     </section>
   );
 };

@@ -34,7 +34,9 @@ const Header = () => {
           <button
             className="header__right__hamburger-btn"
             onClick={() => setIsOpen(true)}
-            aria-label="開啟選單"
+            aria-label="Open mobile menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
           >
             <AiOutlineMenu />
           </button>

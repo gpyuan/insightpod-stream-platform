@@ -11,19 +11,14 @@ const Benefit = () => {
   ];
 
   return (
-    <section className="benefit">
+    <section className="benefit" aria-labelledby="benefit-heading">
       {/* 左側圖片 */}
-      <img
-        src={benefitImg}
-        alt=""
-        role="presentation"
-        className="benefit__img"
-      />
+      <img src={benefitImg} alt="" className="benefit__img" />
 
       {/* 右側內容 */}
       <div className="benefit__content">
         <div className="benefit__content__title-group">
-          <h2 className="benefit__content__title h2">
+          <h2 id="benefit-heading" className="benefit__content__title h2">
             What makes us different from other
           </h2>
           <p className="benefit__content__description body4">
@@ -37,7 +32,7 @@ const Benefit = () => {
             <li key={feature} className="benefit__content__feature-item">
               <img
                 src={checkIcon}
-                alt="checkIcon"
+                alt=""
                 className="benefit__content__feature-icon"
               />
               <span className="benefit__content__feature-text">{feature}</span>

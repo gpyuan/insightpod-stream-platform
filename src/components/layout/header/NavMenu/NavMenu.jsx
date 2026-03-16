@@ -1,16 +1,21 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavMenu.scss";
 import { navLinks } from "@/data";
 
 const NavMenu = ({ className }) => {
   return (
-    <nav className="nav-menu">
+    <nav className="nav-menu" aria-label="Main navigation">
       <ul className="nav-menu__list">
         {navLinks.map((link) => (
           <li key={link.path} className="nav-menu__item">
-            <Link to={link.path} className="body5">
+            <NavLink
+              to={link.path}
+              className={({ isActive }) =>
+                `body5 ${isActive ? "is-active" : ""}`
+              }
+            >
               {link.name}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
