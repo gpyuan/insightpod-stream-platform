@@ -8,9 +8,9 @@ const About = () => {
     { number: "236", label: "Podcasters" },
   ];
   return (
-    <section className="about">
+    <section className="about" aria-labelledby="about-heading">
       <div className="about__header">
-        <h2 className="about__header__title">
+        <h2 id="about-heading" className="about__header__title">
           Our podcast dives into diverse topics like life, finances,
           <span className="about__header__text">
             {" "}
@@ -18,23 +18,18 @@ const About = () => {
             advice.
           </span>
         </h2>
-        <img
-          src={aboutImg}
-          alt=""
-          role="presentation"
-          className="about__header__img"
-        />
+        <img src={aboutImg} alt="" className="about__header__img" />
       </div>
 
       <div className="about__content">
-        <div className="about__content__achivements">
-          {stats.map((item, index) => (
-            <div key={index} className="about__content__item">
-              <span className="about__content__number h1">{item.number}</span>
-              <p className="about__content__lable body2">{item.label}</p>
+        <dl className="about__content__achievements">
+          {stats.map((item) => (
+            <div key={item.label} className="about__content__item">
+              <dt className="about__content__number h1">{item.number}</dt>
+              <dd className="about__content__label body2">{item.label}</dd>
             </div>
           ))}
-        </div>
+        </dl>
 
         <div className="about__content__description">
           <p className="about__content__description__text body4">
