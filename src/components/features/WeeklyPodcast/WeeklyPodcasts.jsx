@@ -1,6 +1,6 @@
 import "./WeeklyPodcasts.scss";
 import { Link } from "react-router-dom";
-import Button from "@/components/common/button/Button";
+import Button from "@/components/common/Button/Button";
 import { weeklyPodcastsData } from "@/data";
 import WeeklyPodcastCard from "./WeeklyPodcastCard";
 

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./Header.scss";
 
-import Logo from "@/components/common/logo/Logo";
+import Logo from "@/components/common/Logo/Logo";
 import NavMenu from "./NavMenu/NavMenu";
-import Button from "@/components/common/button/button";
+import Button from "@/components/common/Button/Button";
 import MobileNavMenu from "./NavMenu/mobileNavMenu/MobileNavMenu";
 import { AiOutlineMenu } from "react-icons/ai";
 

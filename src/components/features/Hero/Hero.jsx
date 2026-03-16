@@ -1,6 +1,6 @@
 import "./Hero.scss";
-import Button from "@/components/common/button/Button";
-import PlayButton from "@/components/common/button/PlayButton";
+import Button from "@/components/common/Button/Button";
+import PlayButton from "@/components/common/Button/PlayButton";
 import heroImg from "@/assets/images/hero.png";
 
 const Hero = () => {

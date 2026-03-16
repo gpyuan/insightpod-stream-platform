@@ -1,8 +1,8 @@
 import "./Footer.scss";
-import Logo from "@/components/common/logo/Logo";
+import Logo from "@/components/common/Logo/Logo";
 import { navLinks } from "@/data";
 import { Link } from "react-router-dom";
-import Button from "@/components/common/button/Button";
+import Button from "@/components/common/Button/Button";
 import { FaXTwitter } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 import { MdOutlineFacebook } from "react-icons/md";

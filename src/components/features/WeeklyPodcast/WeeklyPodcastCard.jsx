@@ -1,5 +1,5 @@
 import "./WeeklyPodcastCard.scss";
-import PlayButton from "@/components/common/button/PlayButton";
+import PlayButton from "@/components/common/Button/PlayButton";
 
 const WeeklyPodcastCard = ({ data, variant = "list", className }) => {
   const { id, image, title, author, duration } = data;

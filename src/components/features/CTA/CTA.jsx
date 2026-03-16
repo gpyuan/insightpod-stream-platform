@@ -1,7 +1,7 @@
 import "./CTA.scss";
 import CTAImg from "@/assets/images/ctaImg.png";
-import Button from "@/components/common/button/Button";
-import PlayButton from "@/components/common/button/PlayButton";
+import Button from "@/components/common/Button/Button";
+import PlayButton from "@/components/common/Button/PlayButton";
 
 const CTA = () => {
   return (

@@ -8,7 +8,7 @@ import TopPodcasters from "@/components/features/TopPodcasters/TopPodcasters";
 import About from "@/components/features/About/About";
 import Benefit from "@/components/features/Benefit/Benefit";
 import CTA from "@/components/features/CTA/CTA";
-import Footer from "./components/layout/footer/Footer";
+import Footer from "./components/layout/Footer/Footer";
 
 const App = () => {
   return (
