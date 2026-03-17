@@ -4,7 +4,11 @@
 
 ---
 
-## 截圖
+## 🌐 線上展示
+
+🔗 [Live Demo](https://yourusername.github.io/insightpod-stream-platform/)
+
+## 📸 專案截圖
 
 ![screenshot](./public/screenshot.png)
 
@@ -12,7 +16,7 @@
 
 - **Pixel-perfect**: 完整還原 Figma 設計稿的字體、間距與配色。
 
-- **Responsive (RWD)**: 支援桌機、平板與手機板切換。
+- **Responsive (RWD)**: 支援桌機、平板與手機版面切換。
 
 - **Component-based**: 使用 React 拆解頁面，確保程式碼可維護與可複用。
 
@@ -28,10 +32,11 @@
 
 ## 🛠 使用技術
 
-- **前端框架**：React
-- **路由管理**：React Router Dom
-- **樣式處理**：SCSS - 採用 BEM 命名規範
-- **圖示庫**：React Icons
+- **前端框架**：React 19.2
+- **路由管理**：React Router v7
+- **樣式處理**：SCSS (採用 BEM 命名規範)
+- **圖示庫**：React Icons 5.6
+- **建置工具**: Vite 7
 
 ---
 
@@ -45,6 +50,27 @@ src/
 │   ├── features/    # 功能性組件 (Hero, WeeklyPodcast, About)
 │   └── layout/      # 佈局組件 (Header, Footer)
 ├── data/            # 模擬資料 (Mock data)
-├── page/            # 頁面級組件
+├── pages/            # 頁面級組件
 └── styles/          # 全域樣式與變數 (Global settings)
 ```
+
+## 🚀 快速開始
+
+### 安裝與執行
+
+```bash
+git clone ...
+npm install
+npm run dev
+```
+
+## 📄 授權
+
+此專案僅供學習與展示用途。設計稿版權歸原作者所有。
+
+---
+
+## 🙏 致謝
+
+- 設計稿來源：[Paperpillar Community](https://www.figma.com/design/QXMBKnCpp8qvBWqUXbOgfL/)
+- 圖示來源：React Icons
