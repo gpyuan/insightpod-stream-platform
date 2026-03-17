@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "@/components/layout/header/Header";
 import Hero from "@/components/features/Hero/Hero";
 import WeeklyPodcasts from "@/components/features/WeeklyPodcast/WeeklyPodcasts";

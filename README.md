@@ -1,16 +1,46 @@
-# React + Vite
+# 🎙️ InsightPod - Podcast Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是一個基於 [Figma 設計稿](https://www.figma.com/design/QXMBKnCpp8qvBWqUXbOgfL/InsightPod---Podcast-Landing-page---Paperpillar--Community-?node-id=2-2750) 實作的 React 切版練習專案。專注於練習現代化前端開發流程、組件化架構設計，以及高度重視 Web 無障礙性 (Accessibility, A11y) 的實作。
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 專案特點
 
-## React Compiler
+- **Pixel-perfect**: 完整還原 Figma 設計稿的字體、間距與配色。
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Responsive (RWD)**: 支援桌機、平板與手機板切換。
 
-## Expanding the ESLint configuration
+- **Component-based**: 使用 React 拆解頁面，確保程式碼可維護與可複用。
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Accessibility (A11y)**:
+
+  - 使用語意化 HTML5 標籤 (`<header>`、`<main>`、`<footer>`、`<nav>`)。
+  - 實作完整 ARIA 屬性（`aria-label`、`aria-expanded`、`aria-pressed`）。
+  - 支援鍵盤操作與螢幕閱讀器友善互動。
+
+- **Routing**: 使用 `HashRouter` 確保在 GitHub Pages 環境下，不會出現 404 錯誤。
+
+---
+
+## 🛠 使用技術
+
+- **前端框架**：React
+- **路由管理**：React Router Dom
+- **樣式處理**：SCSS - 採用 BEM 命名規範
+- **圖示庫**：React Icons
+
+---
+
+## 📂 專案結構
+
+```text
+src/
+├── assets/          # 靜態資源 (圖片、字體)
+├── components/
+│   ├── common/      # 通用組件 (Button, Logo)
+│   ├── features/    # 功能性組件 (Hero, WeeklyPodcast, About)
+│   └── layout/      # 佈局組件 (Header, Footer)
+├── data/            # 模擬資料 (Mock data)
+├── page/            # 頁面級組件
+└── styles/          # 全域樣式與變數 (Global settings)
+```

@@ -28,11 +28,13 @@ const TopPodcasterCard = ({ data, size }) => {
           </p>
         )}
       </div>
+      {/* <div className="top-podcaster-card__img-container"> */}
       <img
         src={image}
         alt={`${author} podcast cover`}
         className={`top-podcaster-card__img top-podcaster-card__img--${size}`}
       />
+      {/* </div> */}
     </article>
   );
 };
