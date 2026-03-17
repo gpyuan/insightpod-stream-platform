@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "@/components/layout/header/Header";
 import Hero from "@/components/features/Hero/Hero";
 import WeeklyPodcasts from "@/components/features/WeeklyPodcast/WeeklyPodcasts";
-import AllWeeklyPodcast from "@/page/AllWeeklyPodcast";
+import AllWeeklyPodcast from "@/pages/AllWeeklyPodcast";
 import TopPodcasters from "@/components/features/TopPodcasters/TopPodcasters";
 import About from "@/components/features/About/About";
 import Benefit from "@/components/features/Benefit/Benefit";
