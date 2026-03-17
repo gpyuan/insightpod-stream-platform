@@ -1,8 +1,12 @@
-# 🎙️ InsightPod - Podcast Landing Page
+# InsightPod - Podcast Landing Page
 
 這是一個基於 [Figma 設計稿](https://www.figma.com/design/QXMBKnCpp8qvBWqUXbOgfL/InsightPod---Podcast-Landing-page---Paperpillar--Community-?node-id=2-2750) 實作的 React 切版練習專案。專注於練習現代化前端開發流程、組件化架構設計，以及高度重視 Web 無障礙性 (Accessibility, A11y) 的實作。
 
 ---
+
+## 截圖
+
+![screenshot](./public/screenshot.png)
 
 ## 🚀 專案特點
 
